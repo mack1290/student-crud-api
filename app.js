@@ -13,7 +13,6 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-// app.use(logger('dev'));
 
 // connect to mongoose
 mongoose.connect(MONGO_DB_URI)
@@ -36,7 +35,7 @@ app.use('/api/', mainRoutes);
 
 app.get('/', (req, res) => {
   res.status(200).json({
-    message: 'Welcome to Project Support',
+    message: 'Welcome to Student CRUD API',
   });
 });
 
